@@ -2,7 +2,7 @@
 Repository containing GPG public keys associated with the Monad Foundation
 
 ## How it works
-Once the Monad Foundation sends a GPG-signed message via official node operators channels (Discord, E-mail, Slack, Telegram), node operators can independently check for the authenticity of the message by verifying the signatures.
+Once the Monad Foundation sends a GPG-signed message via official node operators channels (Discord, Email, Slack, Telegram), node operators can independently check for the authenticity of the message by verifying the signatures.
 All GPG-signed messages will contain:
 - a unique index (e.g. `MF Announcement #0`)
 - a creation timestamp (e.g. `Created: 2026-08-08T08:08:08`
