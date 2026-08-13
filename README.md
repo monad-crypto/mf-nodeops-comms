@@ -10,7 +10,7 @@ All GPG-signed messages will contain:
 - actual message content
 - PGP signature
 
-The messages will always be sent/posted between the creation timestamp and the expiration timestamp and the index will be incremental.
+The messages will always be sent/posted between the creation timestamp and the expiration timestamp, the index will be incremental and the message will be signed by at least 2 signers whose public keys can be found in the [keys folder](keys/).
 
 ## How to verify the signature
 - Install GPG (different based on platform, check the official website [here](https://www.gnupg.org/download/))
