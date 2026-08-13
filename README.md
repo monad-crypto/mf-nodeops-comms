@@ -5,8 +5,8 @@ Repository containing GPG public keys associated with the Monad Foundation
 Once the Monad Foundation sends a GPG-signed message via official node operators channels (Discord, Email, Slack, Telegram), node operators can independently check for the authenticity of the message by verifying the signatures.
 All GPG-signed messages will contain:
 - an unique index (e.g. `MF Announcement #0`)
-- a creation timestamp (e.g. `Created: 2026-08-08T08:08:08`
-- an expiration timestamp (e.g. `Expires: 2026-09-09T09:09:09`)
+- a creation timestamp (e.g. `Created: 2026-08-08T08:08:08 UTC`)
+- an expiration timestamp (e.g. `Expires: 2026-09-09T09:09:09 UTC`)
 - actual message content
 - PGP signature
 
