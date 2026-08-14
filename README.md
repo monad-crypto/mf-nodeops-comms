@@ -2,15 +2,14 @@
 Repository containing GPG public keys associated with the Monad Foundation
 
 ## How it works
-Once the Monad Foundation sends a GPG-signed message via official node operators channels (Discord, Email, Slack, Telegram), node operators can independently check for the authenticity of the message by verifying the signatures.
-All GPG-signed messages will contain:
-- an unique index (e.g. `MF Announcement #0`)
-- a creation timestamp (e.g. `Created: 2026-08-08T08:08:08 UTC`)
-- an expiration timestamp (e.g. `Expires: 2026-09-09T09:09:09 UTC`)
-- actual message content
-- PGP signature
+The Monad Foundation announcements to node operators will be GPG signed. Once the Monad Foundation sends a GPG-signed message via official node operators channels (Discord, Email, Slack, Telegram), node operators can independently verify the authenticity of the message by verifying the GPG signatures. All GPG-signed messages will contain:
+- an unique index (e.g. MF Announcement #0)
+- a creation timestamp (e.g. Created: 2026-08-08T08:08:08
+- an expiration timestamp (e.g. Expires: 2026-09-09T09:09:09)
+- the actual message content
+- a PGP signature
 
-The messages will always be sent/posted between the creation timestamp and the expiration timestamp, the index will be incremental and the message will be signed by at least 2 signers whose public keys can be found in the [keys folder](keys/).
+The messages will be sent/posted between the creation timestamp and the expiration timestamp, the index will be incremental and each message will include signatures from at least two authorized signers whose public keys can be found in the [keys folder](keys/).
 
 ## How to verify the signature
 - Install GPG (different based on platform, check the official website [here](https://www.gnupg.org/download/))
