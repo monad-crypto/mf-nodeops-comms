@@ -12,7 +12,7 @@ The readable announcement will contain:
 - the actual message content
 The signature file will contain the combined PGP signatures from 2+ authorized signers.
 
-The messages will be sent/posted between the creation timestamp and the expiration timestamp, the index will be incremental and each message will include signatures from at least two authorized signers whose public keys can be found both in the [keys folder](keys/) and in the [official documentation](https://placeholder).
+The messages will be sent/posted between the creation timestamp and the expiration timestamp, the index will be incremental and each message will include signatures from at least two authorized signers. Their public keys can be found in the official [repository](https://github.com/monad-crypto/mf-nodeops-comms/tree/main/keys), while their full primary-key fingerprints can be found in the official [documentation](https://docs.monad.xyz/node-ops/gpg-keys.json).
 
 ## How to verify the signature
 - Install GPG (different based on platform, check the official website [here](https://www.gnupg.org/download/))
