@@ -1,4 +1,4 @@
-# mf-nodeops-comms-keyring
+# mf-nodeops-comms
 Repository containing GPG public keys associated with the Monad Foundation
 
 ## How it works
