@@ -23,7 +23,7 @@ git clone https://github.com/monad-crypto/mf-nodeops-comms.git
 # Pull the latest changes
 git pull
 ```
-- Confirm the displayed fingerprints match the authorized Monad signing-key fingerprints published [here](https://placeholder) before importing them
+- Confirm the displayed fingerprints match the authorized Monad signing-key fingerprints published [here](https://docs.monad.xyz/node-ops/gpg-keys.json) before importing them
 ```
 cd mf-nodeops-comms
 gpg --show-keys --with-fingerprint keys/*.pub.asc
