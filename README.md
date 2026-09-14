@@ -10,6 +10,7 @@ The readable announcement will contain:
 - an unique index (e.g. MF Announcement #0)
 - an UTC creation timestamp in the ISO 8601 format (e.g. Created: 2026-08-08T08:08:08Z)
 - the actual message content
+
 The signature file will contain the combined PGP signatures from 2+ authorized signers.
 
 The messages will be sent/posted after the creation timestamp, the index will be incremental and each message will include signatures from at least two authorized signers. Their public keys can be found in the official [repository](https://github.com/monad-crypto/mf-nodeops-comms/tree/main/keys), while their full primary-key fingerprints can be found in the official [documentation](https://docs.monad.xyz/node-ops/gpg-keys.json).
