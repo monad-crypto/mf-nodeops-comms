@@ -7,12 +7,11 @@ The Monad Foundation announcements to node operators will be GPG signed. Once th
 - `announcement.sig`  - the combined signatures from 2+ authorized signers ([example](announcements/mf-0/announcement.sig))
 The readable announcement will contain:
 - an unique index (e.g. MF Announcement #0)
-- a creation timestamp (e.g. Created: 2026-08-08T08:08:08)
-- an expiration timestamp (e.g. Expires: 2026-10-10T10:10:10)
+- an UTC creation timestamp in the ISO 8601 format (e.g. Created: 2026-08-08T08:08:08Z)
 - the actual message content
 The signature file will contain the combined PGP signatures from 2+ authorized signers.
 
-The messages will be sent/posted between the creation timestamp and the expiration timestamp, the index will be incremental and each message will include signatures from at least two authorized signers. Their public keys can be found in the official [repository](https://github.com/monad-crypto/mf-nodeops-comms/tree/main/keys), while their full primary-key fingerprints can be found in the official [documentation](https://docs.monad.xyz/node-ops/gpg-keys.json).
+The messages will be sent/posted after the creation timestamp, the index will be incremental and each message will include signatures from at least two authorized signers. Their public keys can be found in the official [repository](https://github.com/monad-crypto/mf-nodeops-comms/tree/main/keys), while their full primary-key fingerprints can be found in the official [documentation](https://docs.monad.xyz/node-ops/gpg-keys.json).
 
 ## How to verify the signature
 - Install GPG (different based on platform, check the official website [here](https://www.gnupg.org/download/))
