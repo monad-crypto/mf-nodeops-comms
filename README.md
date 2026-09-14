@@ -5,6 +5,7 @@ Repository containing GPG public keys associated with the Monad Foundation, node
 The Monad Foundation announcements to node operators will be GPG signed. Once the Monad Foundation sends a message via official node operators channels (Discord, Email, Slack, Telegram), node operators can independently verify the authenticity of the message by verifying the GPG signatures. Each message will contain:
 - `announcement.txt`  - the readable announcement ([example](announcements/mf-0/announcement.txt))
 - `announcement.sig`  - the combined signatures from 2+ authorized signers ([example](announcements/mf-0/announcement.sig))
+
 The readable announcement will contain:
 - an unique index (e.g. MF Announcement #0)
 - an UTC creation timestamp in the ISO 8601 format (e.g. Created: 2026-08-08T08:08:08Z)
