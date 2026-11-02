@@ -1,0 +1,39 @@
+MF Announcement #7
+
+Created: 2026-11-02T07:15:00Z
+
+Code Orange:
+
+CVE-2026-98432 - Linux Kernel IPv4 TCP use-after-free Vulnerability
+
+Greetings Node Operators,
+A vulnerability has been disclosed in the Linux kernel (CVE-2026-98432) affecting the kernel's IPv4 TCP code (inet_opt / ireq_opt get freed before the RCU grace period ends).
+
+MF recommends applying the following interim mitigation on your Monad nodes across all networks at your earliest convenience.
+
+Instructions:
+
+```
+# Block incoming TCP packets containing IPv4 options (nftables)
+sudo nft -f - <<'EOF'
+table inet cve_2026_98432 {
+    chain input {
+        type filter hook input priority -310; policy accept;
+        ip protocol tcp ip hdrlength > 5 counter drop
+    }
+}
+EOF
+
+# Disable Multipath TCP (MPTCP) and TCP request socket migration
+sudo tee /etc/sysctl.d/99-cve-2026-98432.conf >/dev/null <<'EOF'
+net.mptcp.enabled = 0
+net.ipv4.tcp_migrate_req = 0
+EOF
+sudo sysctl -p /etc/sysctl.d/99-cve-2026-98432.conf
+
+# Check for existing MPTCP listeners - the affected services may need a restart to close the existing MPTCP sockets
+sudo ss -lnMp
+```
+
+Many thanks,
+MF
