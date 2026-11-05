@@ -1,0 +1,31 @@
+MF Announcement #8
+
+Created: 2026-11-05T01:11:00Z
+
+Code Orange:
+
+CVE-2026-109518 Patch
+
+Greetings Node Operators,
+A patch has been posted  by Ubuntu for CVE-2026-109518
+
+# pre-requites: enabling TLS on ubuntu archive server
+sudo sed -Ei 's!http://((([a-z]+\.)?archive|security|ports)\.ubuntu\.com)!https://\1!' /etc/apt/sources.list /etc/apt/sources.list.d/*.list /etc/apt/sources.list.d/*.sources
+
+# if possible
+sudo apt update && sudo apt upgrade -o Acquire::Retries=0
+
+# if no
+sudo apt update && sudo apt install -o Acquire::Retries=0 --only-upgrade '?source-package(^apt$)'
+
+# One caveat: If the unattended-upgrades service is running:
+- New security updates are applied automatically every 24 hours.
+- If the service is enabled, the patches mentioned above should be applied within 24 hours of becoming available.
+
+Full Instructions are located here: https://ubuntu.com/blog/apt-vulnerability-fixes-available
+
+MF recommends these steps be actioned at your earliest convenience.
+
+Many thanks,
+
+MF
