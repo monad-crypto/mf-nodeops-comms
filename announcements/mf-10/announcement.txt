@@ -1,0 +1,116 @@
+MF Announcement #10
+
+Created: 2026-11-10T12:26:00Z
+
+Code Orange:
+
+CVE-2026-98432 Patch (UPRADING IN COHORTS ACROSS BOTH NETWORKS - COHORT 2 SIGNALLED TO UPGRADE)
+
+Greetings Node Operators,
+A new Kernel is available that addresses CVE-2026-98432
+
+THIS KERNEL UPGRADE HAS AN EXPECTED DOWNTIME OF 5-10 MINS PER NODE THEREFORE IT IS BEING ROLLED OUT IN COHORTS!
+(THIS ANNOUNCEMENT IS FOR COHORT 2 ON BOTH NETWORKS - CHECK RESPECTIVE LISTS BELOW)
+
+PLEASE NOTE: WHILST BOTH NETWORKS WILL BE GOING THROGH THE UPGRADE AT THE SAME TIME, YOUR TESTNET COHORT CAN BE/MAY BE DIFFERENT TO YOUR MAINNET COHORT, CHECK BOTH LISTS BELOW!
+
+Green: COHORT 1 + 2 = NOW UPGRADING
+Orange: COHORT 3 = Pending
+Red: Cohort 4 + 5 = TBA
+
+TESTNET COHORT 2:
+(https://docs.google.com/spreadsheets/d/1xPQSzgSNDg2NdQJSBN7OK30A_f25OEadzcVdiP-Fem8/edit?gid=189850226#gid=189850226)
+
+Lemniscap
+RockX
+stakefish
+DeSpread
+NodeStake
+1XP
+Node.Monster
+Stakin by The Tie
+P2P.org
+Figment
+Simply Staking
+Ledger by P2P.org
+Grassets Tech
+StakingCabin
+LUX8 Validator
+Kukis Global
+DELIGHT
+Laminated Labs
+B-Harvest
+The Workshop
+Huginn
+Allnodes
+Stakely
+CMS Holdings
+BlockHunters
+Stardust Staking
+Synergy Nodes
+CroutonDigital
+Fountainhead
+FTP
+SenseiNode
+CoinSummer Labs
+Forest Staking
+Stakeware
+Endorphine Stake
+ContributionDAO
+PathrockNetwork
+Provalidator
+deNodes
+MonadVision
+0xHub
+StarlightNode
+
+
+MAINNET COHORT 2:
+(https://docs.google.com/spreadsheets/d/1q-waQ0Quqzovtomv0PC3DhH1NbUW-NalqR1CF7mGstw/edit?gid=222518305#gid=222518305)
+
+Kraken
+CMS Holdings
+P2P.org 💙
+LeMonad
+Alchemy
+01node
+Bitwise Onchain Solutions
+ProStaking
+Stakin by The Tie
+B-Harvest
+Everstake
+MonadVision
+Kiln1
+Etherfuse
+Stardust Staking
+MAVAN
+Gemini
+Blockdaemon
+Luganodes
+Triton one
+nadradar
+Figment
+GalaxyDigital
+auri0x
+Spectrum Staking
+
+
+Example of Kernel upgrade:
+# Set Kernel version
+V=6.8.0-149-generic
+
+# Install the target kernel packages (the apt task, including update_cache)
+apt-get update
+apt-get install -y linux-image-$V linux-headers-$V linux-modules-$V linux-modules-extra-$V linux-tools-$V
+
+# Remove the generic metapackages (state: absent = remove, not purge)
+apt-get remove -y --allow-change-held-packages linux-image-generic linux-headers-generic
+
+# Set the GRUB_DEFAULT to the new kernel and reboot
+sed -i "s|^GRUB_DEFAULT=.*|GRUB_DEFAULT=\"Advanced options for Ubuntu>Ubuntu, with Linux $V\"|" /etc/default/grub
+update-grub
+reboot
+
+Many thanks,
+
+MF
