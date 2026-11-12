@@ -1,0 +1,106 @@
+MF Announcement #11
+
+Created: 2026-11-12T09:46:00Z
+
+Code Orange:
+
+CVE-2026-98432 Patch (UPRADING IN COHORTS ACROSS BOTH NETWORKS - COHORT 3 NOW ASKED TO UPGRADE)
+
+Greetings Node Operators,
+A new Kernel is available that addresses CVE-2026-98432
+
+THIS KERNEL UPGRADE HAS AN EXPECTED DOWNTIME OF 5-10 MINS PER NODE THEREFORE IT IS BEING ROLLED OUT IN COHORTS!
+
+(THIS ANNOUNCEMENT IS FOR COHORT 3 ON BOTH NETWORKS - CHECK RESPECTIVE LISTS BELOW)
+PLEASE NOTE: WHILST BOTH NETWORKS WILL BE GOING THROUGH THE UPGRADE AT THE SAME TIME, YOUR TESTNET COHORT CAN BE/MAY BE DIFFERENT TO YOUR MAINNET COHORT.
+
+Green: COHORT 1 + 2 + 3 = NOW UPGRADING
+Orange: COHORT 4 = Pending
+Red: Cohort 5 = TBA
+
+TESTNET COHORT 3:
+(https://docs.google.com/spreadsheets/d/1xPQSzgSNDg2NdQJSBN7OK30A_f25OEadzcVdiP-Fem8/edit?gid=189850226#gid=189850226)
+
+Republic
+CertHum
+Chainode Tech
+Unity Nodes
+Imperator.co
+F5 Nodes
+Nodes.Guru
+Staketab
+Redundex
+ProStaking
+StakeSquid
+DSRV
+Staker Space
+Nodeinfra
+Staking Facilities
+Spectrum Staking
+auri0x
+Etherfuse
+Chainlayer
+Validatus
+Silk Nodes
+Artifact
+Syncnode
+Talentum Labs
+Ghost
+Informal Systems
+cp0x_by_STAKRspace
+Qubelabs
+BlackBlocks
+amonstaker
+Encapsulate
+Cassini
+kjnodes
+033609885fbf0154b526af334b7a6eb96985377902185ea44bd60edf732cbd346c
+Spider Node :spider:
+RHINO :rhinoceros:
+Validatrium
+Obelisk
+Firstset
+TheHUB X Firstset
+FP Validated
+
+MAINNET COHORT 3:
+(https://docs.google.com/spreadsheets/d/1q-waQ0Quqzovtomv0PC3DhH1NbUW-NalqR1CF7mGstw/edit?gid=222518305#gid=222518305)
+
+rskl
+ContributionDAO
+L0vd
+Laminated Labs
+stakefish
+H2O Nodes
+Staking Facilities
+Backpack
+TrustedPoint
+InfStones
+Allnodes
+LI.FI
+ASXN
+1XP
+HashKey Cloud
+Informal Systems
+RockX
+Asymmetric Research
+
+Example of Kernel upgrade:
+
+# Set Kernel version
+V=6.8.0-149-generic
+
+# Install the target kernel packages (the apt task, including update_cache)
+apt-get update
+apt-get install -y linux-image-$V linux-headers-$V linux-modules-$V linux-modules-extra-$V linux-tools-$V
+
+# Remove the generic metapackages (state: absent = remove, not purge)
+apt-get remove -y --allow-change-held-packages linux-image-generic linux-headers-generic
+
+# Set the GRUB_DEFAULT to the new kernel and reboot
+sed -i "s|^GRUB_DEFAULT=.*|GRUB_DEFAULT=\"Advanced options for Ubuntu>Ubuntu, with Linux $V\"|" /etc/default/grub
+update-grub
+reboot
+
+Many thanks,
+MF
