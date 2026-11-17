@@ -1,0 +1,24 @@
+MF Announcement #13
+
+Created: 2026-11-17T08:19:00Z
+
+Code Orange:
+
+CVE-2026-99288 (NoisyTCP)
+
+Greetings Node Operators,
+A vulnerability has been disclosed in the Linux kernel (CVE-2026-99288).
+More information about the vulnerability can be found here: https://ubuntu.com/security/CVE-2026-99288
+
+MF recommends applying the following interim mitigation on your Monad nodes across all networks at your earliest convenience.
+
+Instructions:
+
+```
+echo 'net.ipv4.tcp_syncookies=0' | sudo tee /etc/sysctl.d/99-noisytcp.conf
+sudo sysctl -p /etc/sysctl.d/99-noisytcp.conf
+sysctl net.ipv4.tcp_syncookies
+```
+
+Many thanks,
+MF
