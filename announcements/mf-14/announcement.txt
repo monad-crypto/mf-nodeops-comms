@@ -1,0 +1,198 @@
+MF Announcement #14
+
+Created: 2026-11-18T04:40:00Z
+
+Code Orange:
+
+CVE-2026-98432 Patch (UPGRADING IN COHORTS ACROSS BOTH NETWORKS - ALL COHORTS NOW ASKED TO UPGRADE)
+
+Greetings Node Operators,
+A new Kernel is available that addresses CVE-2026-98432
+
+THIS KERNEL UPGRADE HAS AN EXPECTED DOWNTIME OF 5-10 MINS PER NODE THEREFORE IT IS BEING ROLLED OUT IN COHORTS!
+
+Green: ALL COHORTS NOW UPGRADING
+
+TESTNET COHORT 5:
+(https://docs.google.com/spreadsheets/d/1xPQSzgSNDg2NdQJSBN7OK30A_f25OEadzcVdiP-Fem8/edit?gid=189850226#gid=189850226)
+
+InfStones
+GlobalStake
+LI.FI Testnet
+LootGO
+Kamunagi
+Cointelegraph Decentralization Guardians
+HusoNode
+Winsnip
+Paradise Nodes
+OshVanK
+MSC-Industries
+TServices
+Krews
+pi69
+Metatarz
+LuckyResearch Labs
+JustANode
+Cosmic Validator
+InfraSingularity
+unityfarms
+EVOS
+Phase Stake
+StakeChain
+Liquify
+medium
+snoopfear|PON
+BlockPro
+Pointgroup
+Nodeify
+LinkPool
+wombat
+Lunar Strategy
+Data Nexus
+Piconbello
+2xStake
+CHAIN DIGITAL
+VALIDEXIS
+Asterizm
+Infinite Node
+MictoNode
+AnyValid
+Astrosynx
+Wave
+Decentra
+piki-nodes
+Skyneticlabs
+StakeAngle
+Nomis
+BitsMedia
+Crypto-Volk
+Adra
+StakeUp
+Punq Ops
+GabbexNodes
+Hightower
+Atlas Staking
+natabel
+CDEF,Inc.
+R1M
+👋 79anvi 🍀
+StingRay
+BuilderNode
+shadowoftime
+Hex Trust
+MAVAN
+
+
+MAINNET COHORT 5:
+(https://docs.google.com/spreadsheets/d/1q-waQ0Quqzovtomv0PC3DhH1NbUW-NalqR1CF7mGstw/edit?gid=222518305#gid=222518305)
+
+CosmosSpaces
+Pointgroup
+Brightlystake
+Chainflow
+JustANode
+Spider Node 🕷️
+amonstaker
+coinblitz.pro
+Redundex
+Synergy Nodes
+kjnodes
+TServices
+Staker Space
+0xHub
+Metatarz
+Swissstarnode
+Syncnode
+cp0x_by_STAKRspace
+DeSpread
+Stakely
+Paradise Nodes
+TTT VN
+Coinage x DAIC
+Unity Nodes
+CertHum
+unityfarms
+RHINO 🦏
+MCF
+StarlightNode
+BlackBlocks
+GlobalStake
+InfraSingularity
+Republic
+Tessellated
+SpeedyNodes
+MSC-Industries
+[NODERS]
+Lavender.Five Nodes 🐝
+F5 Nodes
+Inotel
+Validatus
+Enigma
+Talentum Labs
+NodesHub
+Stakecito
+Forest Staking
+StakeUs
+CoinSummer Labs
+Phase Stake
+POSTHUMAN
+FP Validated
+deNodes
+Cassini
+xLabs
+r93AX Nodes
+BlockPro
+Pharus
+Nodeify
+LuckyResearch Labs
+Hex Trust
+EmberStake
+DTEAM
+Validatrium
+Obelisk
+GulfLabs
+FTP
+StakeAngle
+Needlecast
+Pacific Meta
+VALIDEXIS
+CHAIN DIGITAL
+Astrosynx
+Ledger by P2P.org
+Chainlayer
+Omakase
+Fountainhead
+Stakeware
+Meria
+✅ CryptoCrew
+BlockPI
+BlockHunters 🎯
+BitGo
+Kukis Global
+DIN
+Animoca Brands
+Ghost
+Ankr
+AltLayer
+Staketab
+Water Cooler Studios
+
+Example of Kernel upgrade:
+
+#Set Kernel version
+V=6.8.0-149-generic
+
+#Install the target kernel packages (the apt task, including update_cache)
+apt-get update
+apt-get install -y linux-image-$V linux-headers-$V linux-modules-$V linux-modules-extra-$V linux-tools-$V
+
+#Remove the generic metapackages (state: absent = remove, not purge)
+apt-get remove -y --allow-change-held-packages linux-image-generic linux-headers-generic
+
+#Set the GRUB_DEFAULT to the new kernel and reboot
+sed -i “s|^GRUB_DEFAULT=.*|GRUB_DEFAULT=“Advanced options for Ubuntu>Ubuntu, with Linux $V”|” /etc/default/grub
+update-grub
+reboot
+
+Many thanks,
+MF
