@@ -1,0 +1,19 @@
+MF Announcement #15
+
+Created: 2026-11-19T13:45:00Z
+
+Code Orange:
+
+MAINNET RELEASE ANNOUNCEMENT - v0.16.7
+
+Greetings Node Operators,
+A new release is available for all nodes on Mainnet!
+
+Instructions: https://docs.monad.xyz/node-ops/upgrade-instructions/v0.16.7
+Changelogs: https://docs.monad.xyz/developer-essentials/changelog/releases#v0-16-7
+
+Note: this release is not governed by cohorts. All operators are invited to upgrade.
+
+Many Thanks,
+
+- MF
