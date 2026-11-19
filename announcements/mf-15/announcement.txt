@@ -4,15 +4,18 @@ Created: 2026-11-19T13:45:00Z
 
 Code Orange:
 
-MAINNET RELEASE ANNOUNCEMENT - v0.16.7
+TESTNET RELEASE ANNOUNCEMENT - v0.16.7
 
 Greetings Node Operators,
-A new release is available for all nodes on Mainnet!
+A new release is available for all nodes on Testnet!
 
 Instructions: https://docs.monad.xyz/node-ops/upgrade-instructions/v0.16.7
 Changelogs: https://docs.monad.xyz/developer-essentials/changelog/releases#v0-16-7
 
-Note: this release is not governed by cohorts. All operators are invited to upgrade.
+Notes:
+1. This release is not governed by cohorts. All testnet operators are invited to upgrade.
+2. v0.16.6 can be skipped, those running v0.16.5 can go straight to v0.16.7
+
 
 Many Thanks,
 
