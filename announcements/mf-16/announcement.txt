@@ -15,6 +15,7 @@ Changelogs: https://docs.monad.xyz/developer-essentials/changelog/releases#v0-16
 Notes:
 1. This release is not governed by cohorts. All mainnet operators are invited to upgrade.
 2. v0.16.6 can be skipped, those running v0.16.5 can go straight to v0.16.7
+3. Any RPC providers running recent hotfix do not upgrade to this release.
 
 
 Many Thanks,
